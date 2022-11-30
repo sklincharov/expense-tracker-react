@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
-import { TransactionContext, TransactionContextType } from '../context/TransactionState';
+import { TransactionContext } from '../context/TransactionState';
+import { ITransactionContext } from '../interfaces/ITransactionContext';
 
 const Balance: React.FC = () => {
-  const { transactions } = useContext(TransactionContext) as TransactionContextType;
+  const { transactions } = useContext(TransactionContext) as ITransactionContext;
 
   const amounts = transactions.map(transaction => transaction.amount);
   const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);

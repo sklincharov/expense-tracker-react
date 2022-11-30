@@ -1,16 +1,11 @@
 import React, { createContext, useState } from 'react';
 import { ITransaction } from '../interfaces/ITransaction';
-
-export type TransactionContextType = {
-    transactions: ITransaction[];
-    addTransaction: (transaction: ITransaction) => void;
-    deleteTransaction: (id: number) => void;
-}
+import { ITransactionContext } from '../interfaces/ITransactionContext';
 
 // Create context
-export const TransactionContext = createContext<TransactionContextType | null>(null);
+export const TransactionContext = createContext<ITransactionContext | null>(null);
 
-interface Props {
+type Props = {
     children: React.ReactNode;
 }
 

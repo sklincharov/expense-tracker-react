@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { ITransaction } from '../interfaces/ITransaction'
-import { TransactionContext, TransactionContextType } from '../context/TransactionState'
+import { TransactionContext } from '../context/TransactionState'
+import { ITransactionContext } from '../interfaces/ITransactionContext';
 
 type Props = {
     transaction: ITransaction
 };
 
 const Transaction: React.FC<Props> = ({ transaction }) => {
-    const { deleteTransaction } = useContext(TransactionContext) as TransactionContextType;
+    const { deleteTransaction } = useContext(TransactionContext) as ITransactionContext;
 
     const sign = transaction.amount < 0 ? '-' : '+';
     return (
