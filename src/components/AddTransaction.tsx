@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { TransactionContext, TransactionContextType } from '../context/TransactionState';
 import { ITransaction } from '../interfaces/ITransaction';
 
-const AddTransaction = () => {
+const AddTransaction: React.FC = () => {
     const { addTransaction } = useContext(TransactionContext) as TransactionContextType;
 
     const [text, setText] = useState('');

@@ -3,7 +3,7 @@ import { TransactionContext, TransactionContextType } from '../context/Transacti
 import Transaction from './Transaction';
 
 
-const TransactionList = () => {
+const TransactionList: React.FC = () => {
     const { transactions } = useContext(TransactionContext) as TransactionContextType;
     return (
         <>

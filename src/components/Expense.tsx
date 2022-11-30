@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { TransactionContext, TransactionContextType } from '../context/TransactionState';
 
-const Expense = () => {
+const Expense: React.FC = () => {
   const { transactions } = useContext(TransactionContext) as TransactionContextType;
 
   const amounts = transactions.map(transaction => transaction.amount);
