@@ -5,10 +5,12 @@ import Balance from './components/Balance';
 import Expense from './components/Expense';
 import Header from './components/Header';
 import TransactionList from './components/TransactionList';
+import TransactionProvider from './context/TransactionState';
+
 
 function App() {
   return (
-    <div className="App">
+    <TransactionProvider>
       <Header />
       <div className="container">
         <Balance />
@@ -16,7 +18,7 @@ function App() {
         <TransactionList />
         <AddTransaction />
       </div>
-    </div>
+    </TransactionProvider>
   );
 }
 
